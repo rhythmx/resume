@@ -12,15 +12,15 @@
   colorlinks=true,           % hyperlinks will be black
   linkcolor=blue,
   linkbordercolor=red,       % hyperlink borders will be red
-  pdfborderstyle={/S/U/W 1}, % border style will be underline of width 1pt
-  pdfborder={1 1 1}
+  pdfborderstyle={/S/U/W 0}, % border style will be underline of width 1pt
+  pdfborder={0 0 0}
 }
 
 \makeatletter
 \Hy@AtBeginDocument{%
-  \def\@pdfborder{1 1 1}% Overrides border definition set with colorlinks=true
+  \def\@pdfborder{0 0 0}% Overrides border definition set with colorlinks=true
   \def\@linkbordercolor=red%
-  \def\@pdfborderstyle{/S/U/W 1}% Overrides border style set with colorlinks=true
+  \def\@pdfborderstyle{/S/U/W 0}% Overrides border style set with colorlinks=true
                                 % Hyperlink border style will be underline of width 1pt
 }
 \makeatother
@@ -34,7 +34,7 @@
   \section{about}
   (512) 677-LULZ
   \href{mailto:sb@nsfw.jp}{sb@nsfw.jp}
-  \href{http://www.linkedin.com/in/sean-bradly}{LinkedIn}
+%  LinkedIn: \href{http://goo.gl/R55ij0}{http://goo.gl/R55ij0}
   ~
   Austin, TX
   \section{skills}
@@ -87,9 +87,9 @@ delivered many projects at all layers of the stack.
       {Wrote an open-source security-focused OS}
       {Inverse Limit (for Google)}
       {
-        As part of Google's \href{http://goo.gl/5mZrVR}{Project Vault} (aka TrustAnchor, MicroSEL), Inverse Limit's small team of 4 designed and developed a security-focused computer platform. All components are open source, from the board schematics, OS, applications, and even the CPU (based on OpenRISC.)\\
+        As part of Google's \em{Project Vault} (launch video from Google I/O 2015: \href{http://goo.gl/5mZrVR}{http://goo.gl/5mZrVR}), Inverse Limit's small team of 4 designed and developed a security-focused computer platform. All components are open source, from the board schematics, OS, applications, and even the CPU (based on OpenRISC.)\\
         
-        I was solely responsible for implementing the real-time multitasking operating system for the project (source available \href{http://goo.gl/0pbsk7}{here}.)\\
+        I was solely responsible for implementing the real-time multitasking operating system for the project (source available at \href{http://goo.gl/0pbsk7}{http://goo.gl/0pbsk7}).\\
         
         Earlier in the project I was responsible for creating the initial software that used a fake FAT filesystem as a means of socket communication between an external device and an Android device without need for a kernel driver.\\
 
