@@ -1,0 +1,242 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\addbibresource{bibliography.bib}
+\usepackage[normalem]{ulem}
+\newcommand{\heading}[1]{
+  \vskip 0.05in
+  \subsection{\uline{\small{#1}}}
+  \vskip 0.05in
+}
+
+\hypersetup{%
+  colorlinks=true,           % hyperlinks will be black
+  linkcolor=blue,
+  linkbordercolor=red,       % hyperlink borders will be red
+  pdfborderstyle={/S/U/W 1}, % border style will be underline of width 1pt
+  pdfborder={1 1 1}
+}
+
+\makeatletter
+\Hy@AtBeginDocument{%
+  \def\@pdfborder{1 1 1}% Overrides border definition set with colorlinks=true
+  \def\@linkbordercolor=red%
+  \def\@pdfborderstyle{/S/U/W 1}% Overrides border style set with colorlinks=true
+                                % Hyperlink border style will be underline of width 1pt
+}
+\makeatother
+
+\begin{document}
+\header{sean }{bradly}
+       {Computer Security | Software Engineering}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \section{about}
+  (512) 677-LULZ
+  \href{mailto:sb@nsfw.jp}{sb@nsfw.jp}
+  \href{http://www.linkedin.com/in/sean-bradly}{LinkedIn}
+  ~
+  Austin, TX
+  \section{skills}
+  software development
+  computer security
+  research \& development
+  networking
+  reverse engineering
+  linux
+  windows
+  embedded
+  x86
+  ARM
+  OpenRISC
+  \section{languages}
+  c++
+  c
+  assembly
+  ruby
+  python
+  bash
+  java
+  lisp
+  \LaTeX
+\end{aside}
+
+\section{overview}
+
+Within my 15 years of professional experience in the software
+engineering and computer security markets, I have successfully
+delivered many projects at all layers of the stack. 
+
+\section{interests}
+
+\begin{itemize}
+\item{Music: I play guitars, bass, drums, synths and recently
+  acquired a thrash metal ukulele}
+\item{Home Improvement: my recently-purchased first house has been keeping me busy}
+\item{Entertaining: Having friends over for some smoked meats, craft
+  beer, and fine whisky}
+\item{Attending conferences and local meetups to keep current
+  and socialize}
+\end{itemize}
+
+\section{career highlights}
+
+\begin{entrylist}
+  \entry
+      {2014-2015}
+      {Wrote an open-source security-focused OS}
+      {Inverse Limit (for Google)}
+      {
+        As part of Google's \href{http://goo.gl/5mZrVR}{Project Vault} (aka TrustAnchor, MicroSEL), Inverse Limit's small team of 4 designed and developed a security-focused computer platform. All components are open source, from the board schematics, OS, applications, and even the CPU (based on OpenRISC.)\\
+        
+        I was solely responsible for implementing the real-time multitasking operating system for the project (source available \href{http://goo.gl/0pbsk7}{here}.)\\
+        
+        Earlier in the project I was responsible for creating the initial software that used a fake FAT filesystem as a means of socket communication between an external device and an Android device without need for a kernel driver.\\
+
+      }
+  \entry
+      {2013}
+      {Implemented a custom x86 hypervisor}
+      {Inverse Limit (for DARPA)}
+      {The MAIM project (Micro-architecture Instruction Mining) was one of three Cyber Fast Track proposals that DARPA accepted from Inverse Limit. It consisted of an x86 instruction fuzzer and a cross-plaform hypervisor to execute the instructions and compare their behavior on different implementations. The project was able to identify several undocumented differences between Intel, AMD and Via architectures.\\
+
+      }
+  \entry
+      {2009-2011}
+      {Delivered a complete TCP/IP Stack}
+      {BreakingPoint Systems}
+      {I took BreakingPoint's existing network security testing framework and completely redesigned it from a traffic simulator into a fully featured TCP/IP stack that could communicate and test live applications. Both versions were implemented in Ruby, but by deeply integrating concurrency into the new design and strategically replacing Ruby components with C extensions, I also managed to quadruple the performance of the already heavily optimized code.}
+\end{entrylist}
+\newpage
+
+\section{work history}
+
+\begin{entrylist}
+  \entry
+    {2013-now}
+    {Inverse Limit, LLC.}
+    {Research and Development}
+    {
+
+      Inverse Limit is a research and engineering contracting company
+      that was formed three years ago with my colleagues
+      Patrick Stach and Tim Carstens, supported by notable clients
+      such as Google and DARPA. 
+
+      \heading{Project Vault}
+      
+      \begin{itemize}
+      \item{Embedded OS (see above)}
+      \item{Developed IO model using FAT filesystem}
+      \item{Hardware drivers (GPIO, UART, Flash, Crypto acceleration)}
+      \item{Android Prototype Application (using native SDK)}
+      \item{Designed build system and project layout}
+      \end{itemize}
+
+      \heading{Project MAIM}
+      
+      \begin{itemize}
+      \item{Custom x86 hypervisor (see above)}
+      \item{Implemented generators for a number of x86/x64 instruction types}
+      \item{Implemented main data analysis engine}
+      \item{Authored final report with all research results}
+      \end{itemize}
+
+      \heading{Other}
+      
+      \begin{itemize}
+      \item{Design of new research proposals}
+      \item{Helped design and implement kerberos protocol analysis tools}
+      \item{Maintained static code analysis tools written in libclang}
+      \end{itemize}
+      
+    }
+  \entry
+    {2011-2013}
+    {Leviathan Security Group}
+    {Security Consulting and Development}
+    {
+      \heading{Mayor Myer (DARPA Research)}
+      \begin{itemize}
+      \item{Designed x64 polymorphic shellcode encoder for Metasploit}
+      \item{GNU libc heap corruption detector}
+      \item{Maintained and extended x86 JIT compiler and emulator}
+      \end{itemize}
+      \heading{Consulting}
+      \begin{itemize}
+      \item{Audited Intel ME firmware}
+      \item{Developed fuzzer for Intel ME applications}
+      \item{Audits of embedded Java applications}
+      \item{Android Research}
+      \end{itemize}
+      
+    }
+  \entry
+    {2007-2011}
+    {BreakingPoint Systems Inc. (now Ixia)}
+    {Security Engineer}
+    {
+
+      \begin{itemize}
+      \item{Complete TCP/IP implementation in Ruby (see above)}
+      \item{Implemented library used to support traffic simulations for 100+ application protocols}
+      \item{Discovered vulnerabilities in MS Windows, TippingPoint, Novell Netware, Synergy and Peercast}
+      \item{Performed monthly differential patch analysis on Microsoft Updates}
+      \item{Researched and developed new techniques for evading IDS/IPS devices}
+      \item{Maintained up-to-date product coverage of important security vulnerabilities} 
+      \item{Implemented fuzzers for HTML, HTTP, PDF, OSPF, BGP}
+      \end{itemize}
+
+    }
+  \entry
+    {2006-2007}
+    {Secured Infrastructure Design Corp. (now defunct)}
+    {Security Engineer}
+    {
+      \begin{itemize}
+        \item{Relocated to Tokyo}
+        \item{Assisted with development of automated vulnerability scanner}
+        \item{Designed distributed TCP/UDP port scanner}
+        \item{Implemented raw networking C extension for Python}
+      \end{itemize}
+    }
+  \entry
+    {2004-2006}
+    {GTECH Corp.}
+    {Automation Engineer / Systems Administrator}
+    {
+      \begin{itemize}
+      \item{Responsible for the ultra-high availability Lottery systems of Texas, California, Idaho, Kansas, Jamaica, and Washington}
+      \item{Maintained and operated high volume Lottery servers that handle thousands of transactions per minute in an environment where government fines are imposed for downtime}
+      \item{Administrated OpenVMS, AIX, Linux, Tru64  Unix, Windows (98, 2000, XP, 2003), MSSQL, and Sybase}
+      \item{Automated a large part of the Operations department using Perl, Shell (csh and DCL), and BMC Control-M}
+      \end{itemize}
+    }
+  \entry
+    {2002-2004}
+    {Manning Environmental Inc.}
+    {Software Engineer}
+    {
+      \begin{itemize}
+      \item{Embedded systems programming for Zilog and Microchip microprocessor architectures}
+      \item{Maintained company web site, and several other sites on a contract basis}
+      \item{Circuit design verification and debugging}
+      \item{Designed from scratch and tested a low-cost microphone-based fluid detection circuit}
+      \item{Designed production tests for newly designed circuit boards}
+      \end{itemize}
+    }
+  \entry
+    {2000}
+    {University of Texas: Applied Research Labs}
+    {Java Developer (paid intern)}
+    {
+      \begin{itemize}
+      \item{Performed maintenance updates on Java software for a U.S. Department of Defense project}
+      \item{Assembled and installed new employee PC workstations}
+      \item{Assisted staff with physical labor of office relocation}
+      \end{itemize}
+    }
+\end{entrylist}
+
+
+\end{document}
