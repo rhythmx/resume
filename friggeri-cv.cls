@@ -124,8 +124,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
         red\or%
         green\or%
         Blue\or%
-%        blue\or%
-        orange\else%
+        orange\or%
+        purple\else%
         headercolor\fi%
     } #1#2#3#4%
   }%
