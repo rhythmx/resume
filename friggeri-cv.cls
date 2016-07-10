@@ -173,7 +173,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
     #4\vspace{\parsep}%
-  }\\}
+  \vskip 0.15in
+  }\\
+}
 
 
 %%%%%%%%%%%%%%
