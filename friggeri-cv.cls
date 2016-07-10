@@ -156,11 +156,14 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % List environment %
 %%%%%%%%%%%%%%%%%%%%
 
+\RequirePackage{longtable}
+
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+%  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \begin{longtable}{p{.16\textwidth} p{.84\textwidth}} 
 }{%
-  \end{tabular*}
+  \end{longtable}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 
