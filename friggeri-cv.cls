@@ -13,7 +13,7 @@
 % Colors %
 %%%%%%%%%%
 
-\RequirePackage{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 
 \definecolor{white}{RGB}{255,255,255}
 
@@ -117,17 +117,17 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \RequirePackage{parskip}
 
 \newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{%
+\def\@sectioncolor#1#2#3#4{%
   {%
     \color{%
-      \ifcase\value{colorCounter}%
-        blue\or%
+      \ifcase\value{colorCounter}% 
         red\or%
-        orange\or%
         green\or%
-        purple\else%
+        Blue\or%
+%        blue\or%
+        orange\else%
         headercolor\fi%
-    } #1#2#3%
+    } #1#2#3#4%
   }%
   \stepcounter{colorCounter}%
 }
@@ -135,7 +135,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
   {%
-    \LARGE\headingfont\color{headercolor}%
+    \LARGE\headingfont\color{headercolor}
     \@sectioncolor #1%
   }
   \par\vspace{\parskip}
