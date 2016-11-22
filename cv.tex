@@ -1,7 +1,7 @@
 %!TEX TS-program = xelatex
 \documentclass[]{friggeri-cv}
-\addbibresource{bibliography.bib}
 \usepackage[normalem]{ulem}
+\usepackage{graphicx}
 \newcommand{\heading}[1]{
   \vskip 0.05in
   \subsection{\uline{\small{#1}}}
@@ -25,82 +25,91 @@
 }
 \makeatother
 
+\newcommand{\bulletitems}{
+  \section{Skills}\\
+  \vspace{0.2cm}
+  software development\\
+  computer security\\
+  reverse engineering\\
+  research\\
+  networking\\
+  performance\\
+  embedded\\
+  electronics\\
+  x86\\
+  ARM\\
+  OpenRISC\\
+  \section{Languages}\\
+  \vspace{0.2cm}
+  c++\\
+  c\\
+  assembly\\
+  ruby\\
+  python\\
+  bash\\
+  java\\
+  lisp\\
+  \LaTeX\\
+  \section{Software}\\
+  \vspace{0.2cm}
+  linux\\
+  windows\\
+  gcc\\
+  clang\\
+  gdb\\
+  emacs\\
+  ida\\
+  autotools\\
+  cmake\\
+  \section{Contact}\\
+  \vspace{0.2cm}
+  Austin, TX\\
+  (512) 423-0489\\
+  \href{mailto:sb@nsfw.jp}{sb@nsfw.jp}\\
+}
+\newcommand{\sidebarpic}{
+  \begin{aside}
+  \bulletitems
+  \vspace{1cm}
+    \begin{figure}[ht!]
+      \includegraphics[width=2.5cm]{selfie.jpg}
+    \end{figure}
+  \end{aside}
+}
+\newcommand{\sidebar}{
+% In the aside, each new line forces a line break
+  \begin{aside}
+  \bulletitems
+  \end{aside}
+}
+
 \begin{document}
-\header{sean }{bradly}
+\header{Sean }{Bradly}
        {Computer Security | Software Engineering}
 
-% In the aside, each new line forces a line break
-\begin{aside}
-  \section{skills}
-  software development
-  computer security
-  reverse engineering
-  research
-  networking
-  performance
-  embedded
-  electronics
-  x86
-  ARM
-  OpenRISC
-  \section{languages}
-  c++
-  c
-  assembly
-  ruby
-  python
-  bash
-  java
-  lisp
-  \LaTeX
-  \section{software}
-  linux
-  windows
-  gcc
-  clang
-  gdb
-  emacs
-  ida
-  autotools
-  cmake
-  \section{contact}
-  Austin, TX
-  (512) 677-LULZ
-  \href{mailto:sb@nsfw.jp}{sb@nsfw.jp}
-\end{aside}
+\sidebarpic
+       
+\section{About}
 
-\section{overview}
-
-I've got 15 years of experience in the software engineering and
+With 15 years of experience in the software engineering and
 computer security fields, I have successfully designed, implemented,
 maintained and delivered many successful projects in a wide variety of
 roles with a very broad spectrum of subject matter.
 
-Security is a main focus of mine because it affords me an opportunity
+Security is a primary focus because it affords me an opportunity
 to learn about new things and keep my focus fresh. All software needs
-a level of security and, using that as an entry point, there will
+a level of security, and using that as an entry point, there will
 always be a new and interesting corner of computing for me to explore.
 
-\section{personal interests}
-
-\begin{itemize}
-\item{\textbf{Music}: I play guitars, bass, drums, synths and recently, a thrash metal ukulele}
-\item{\textbf{Home Improvement}: My recently-purchased first house has been keeping me busy}
-\item{\textbf{Entertaining}: Inviting friends for some smoked meats, craft
-  beers, and fine whisky}
-\item{\textbf{Career}: Attending conferences and local meetups to keep current
-  and socialize}
-\end{itemize}
-
-\section{highlights}
+\section{Highlights}
 
 \begin{entrylist}
   \entry
       {2014-2015}
-      {Wrote an open-source security-focused OS}
+      {Designed secure embedded operating system}
       {Inverse Limit (for Google)}
       {
-        As part of Google's \emph{Project Vault}, Inverse Limit's small team of 4 designed and developed a complete computer platform with a security focus. All components are open source. The board schematics, OS, applications, drivers, toolchain, emulator, and even the CPU (based on OpenRISC) have been released to GitHub. I was solely responsible for implementing the real-time multitasking operating system (among other things) for the project.\\
+        As part of Google ATAP's \emph{Project Vault}, Inverse Limit's small team of 4 designed and developed a complete computer platform with a security focus. All components are open source; the board schematics, OS, applications, drivers, toolchain, emulator, and even the CPU (based on OpenRISC) have been released to GitHub. Among other things, I was solely responsible for implementing the real-time multitasking operating system for the project.\\
 %        
 %        Earlier in the project I was responsible for creating the initial software that used a fake FAT filesystem as a means of socket communication between an external device and an Android device without need for a kernel driver.\\
 
@@ -111,7 +120,7 @@ always be a new and interesting corner of computing for me to explore.
       {2013}
       {Implemented a custom x86 hypervisor}
       {Inverse Limit (for DARPA)}
-      {The MAIM project (Micro-architecture Instruction Mining) was one of three Cyber Fast Track proposals that DARPA accepted from Inverse Limit. It consisted of an x86 instruction fuzzer and a cross-platform hypervisor to execute the instructions and compare their behavior on different implementations. The project was able to identify several undocumented differences between Intel, AMD and Via architectures.\\
+      {The MAIM project (Micro-architecture Instruction Mining) was one of three Cyber Fast Track proposals that DARPA accepted from Inverse Limit. It consisted of an x86 instruction fuzzer and a cross-platform hypervisor to execute the instructions and compare their behavior on different implementations. The project was able to identify several undocumented differences between Intel, AMD and VIA architectures.\\
 
       }
   \entry
@@ -120,49 +129,22 @@ always be a new and interesting corner of computing for me to explore.
       {BreakingPoint Systems}
       {I took BreakingPoint's existing network security testing framework and completely redesigned it from a traffic simulator into a fully featured TCP/IP stack that could communicate and test live applications. Both versions were implemented in Ruby, but by deeply integrating concurrency into the new design and strategically replacing Ruby components with C extensions, I also managed to quadruple the performance of the already heavily optimized code.}
 \end{entrylist}
+\section{Personal Interests}
+
+\begin{itemize}
+\item{\textbf{Music}: I play guitars, bass, drums, synths and recently, a thrash metal ukulele}
+\item{\textbf{Home Improvement}: My recently-purchased first house has been keeping me busy}
+\item{\textbf{Entertaining}: Inviting friends for some smoked meats, craft
+  beers, and fine whisky}
+\item{\textbf{Career}: Attending conferences and local meetups to keep current
+  and socialize}
+\end{itemize}
 
 \newpage
-% In the aside, each new line forces a line break
-\begin{aside}
-  \section{skills}
-  software development
-  computer security
-  reverse engineering
-  research
-  networking
-  performance
-  embedded
-  electronics
-  x86
-  ARM
-  OpenRISC
-  \section{languages}
-  c++
-  c
-  assembly
-  ruby
-  python
-  bash
-  java
-  lisp
-  \LaTeX
-  \section{software}
-  linux
-  windows
-  gcc
-  clang
-  gdb
-  emacs
-  ida
-  autotools
-  cmake
-  \section{contact}
-  Austin, TX
-  (512) 677-LULZ
-  \href{mailto:sb@nsfw.jp}{sb@nsfw.jp}
-\end{aside}
 
-\section{work history \hfill {\footnotesize\addfontfeature{Color=black}(references available upon request)}}
+\sidebar
+
+\section{Work History \hfill {\footnotesize\addfontfeature{Color=black}(references available upon request)}}
 
 \begin{entrylist}
   \entry
@@ -245,7 +227,6 @@ always be a new and interesting corner of computing for me to explore.
       \item{Implemented framework for application simulation}
       \item{Discovered and reported new 3rd-party vulnerabilities}
       \item{Performed differential patch analysis on Microsoft updates monthly}
-      \item{Researched new techniques for evading IDS/IPS devices}
       \item{Maintained product coverage of important security vulnerabilities} 
       \item{Implemented fuzzers for HTML, HTTP, PDF, OSPF, BGP}
       \end{itemize}
@@ -255,45 +236,8 @@ always be a new and interesting corner of computing for me to explore.
       
 \newpage
 % In the aside, each new line forces a line break
-\begin{aside}
-  \section{skills}
-  software development
-  computer security
-  reverse engineering
-  research
-  networking
-  performance
-  embedded
-  electronics
-  x86
-  ARM
-  OpenRISC
-  \section{languages}
-  c++
-  c
-  assembly
-  ruby
-  python
-  bash
-  java
-  lisp
-  \LaTeX
-  \section{software}
-  linux
-  windows
-  gcc
-  clang
-  gdb
-  emacs
-  ida
-  autotools
-  cmake
-  \section{contact}
-  Austin, TX
-  (512) 677-LULZ
-  \href{mailto:sb@nsfw.jp}{sb@nsfw.jp}
-\end{aside}
-\section{work history {\footnotesize (continued)}\hfill {\footnotesize\addfontfeature{Color=black}(references available upon request)}}
+\sidebar
+\section{Work History {\footnotesize (optional page)}\hfill {\footnotesize\addfontfeature{Color=black}(references available upon request)}}
 
 \begin{entrylist}
   \entry
