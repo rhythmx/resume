@@ -35,10 +35,7 @@
   networking\\
   performance\\
   embedded\\
-  electronics\\
-  x86\\
-  ARM\\
-  OpenRISC\\
+  exploitation\\ 
   \section{Languages}\\
   \vspace{0.2cm}
   c++\\
@@ -50,6 +47,12 @@
   java\\
   lisp\\
   \LaTeX\\
+  \section{Architectures}\\
+  X86-64\\
+  ARM\\
+  PIC\\
+  ATmega\\
+  OpenRISC\\
   \section{Software}\\
   \vspace{0.2cm}
   linux\\
@@ -101,7 +104,7 @@ to learn about new things and keep my focus fresh. All software needs
 a level of security, and using that as an entry point, there will
 always be a new and interesting corner of computing for me to explore.
 
-\section{Highlights}
+\section{Highlighted Projects}
 
 \begin{entrylist}
   \entry
@@ -114,30 +117,29 @@ always be a new and interesting corner of computing for me to explore.
 %        Earlier in the project I was responsible for creating the initial software that used a fake FAT filesystem as a means of socket communication between an external device and an Android device without need for a kernel driver.\\
 
         Launch video (Google I/O 2015): \hfill \href{http://goo.gl/5mZrVR}{\textbf{http://goo.gl/5mZrVR}}\\
-        Source: \hfill \href{http://goo.gl/0pbsk7}{\textbf{http://goo.gl/0pbsk7}}
+        Source code: \hfill \href{http://goo.gl/0pbsk7}{\textbf{http://goo.gl/0pbsk7}}
       }
   \entry
       {2013}
-      {Implemented a custom x86 hypervisor}
+      {Implemented an x86 hypervisor/fuzzer}
       {Inverse Limit (for DARPA)}
-      {The MAIM project (Micro-architecture Instruction Mining) was one of three Cyber Fast Track proposals that DARPA accepted from Inverse Limit. It consisted of an x86 instruction fuzzer and a cross-platform hypervisor to execute the instructions and compare their behavior on different implementations. The project was able to identify several undocumented differences between Intel, AMD and VIA architectures.\\
+      {The MAIM project (Micro-architecture Instruction Mining) was one of three Cyber Fast Track proposals that DARPA accepted from Inverse Limit. It consisted of an x86 instruction fuzzer and a cross-platform hypervisor to execute the instructions and compare their behavior on different implementations. The project identified several undocumented differences between Intel, AMD and VIA architectures.\\
 
+        Whitepaper: \hfill \href{http://goo.gl/Kwa3Rf}{\textbf{http://goo.gl/Kwa3Rf}}\\
       }
   \entry
       {2010-2011}
       {Delivered a complete TCP/IP Stack}
       {BreakingPoint Systems}
-      {I took BreakingPoint's existing network security testing framework and completely redesigned it from a traffic simulator into a fully featured TCP/IP stack that could communicate and test live applications. Both versions were implemented in Ruby, but by deeply integrating concurrency into the new design and strategically replacing Ruby components with C extensions, I also managed to quadruple the performance of the already heavily optimized code.}
+      {I redesigned BreakingPoint's existing network security test framework from a traffic simulator into a fully featured TCP/IP stack that could test live applications. Both were implemented in Ruby, but by integrating concurrency into the design and strategically replacing components with C extensions, the performance was quadrupled.}
 \end{entrylist}
 \section{Personal Interests}
 
 \begin{itemize}
 \item{\textbf{Music}: I play guitars, bass, drums, synths and recently, a thrash metal ukulele}
 \item{\textbf{Home Improvement}: My recently-purchased first house has been keeping me busy}
-\item{\textbf{Entertaining}: Inviting friends for some smoked meats, craft
-  beers, and fine whisky}
-\item{\textbf{Career}: Attending conferences and local meetups to keep current
-  and socialize}
+\item{\textbf{Entertaining}: Inviting friends for smoked meats, craft beers, and fine whisky}
+\item{\textbf{Career}: Attending conferences and local meetups to socialize and stay current}
 \end{itemize}
 
 \newpage
@@ -148,7 +150,7 @@ always be a new and interesting corner of computing for me to explore.
 
 \begin{entrylist}
   \entry
-    {2013-now}
+    {2013-2017/04}
     {Inverse Limit, LLC.}
     {Research and Development}
     {
@@ -224,11 +226,11 @@ always be a new and interesting corner of computing for me to explore.
       
       \begin{itemize}
       \item{Complete TCP/IP implementation in Ruby (see above)}
-      \item{Implemented framework for application simulation}
+      \item{Implemented framework for network traffic simulation}
       \item{Discovered and reported new 3rd-party vulnerabilities}
       \item{Performed differential patch analysis on Microsoft updates monthly}
       \item{Maintained product coverage of important security vulnerabilities} 
-      \item{Implemented fuzzers for HTML, HTTP, PDF, OSPF, BGP}
+      \item{Sample blog posts: \href{http://goo.gl/8yzJFv}{\textbf{http://goo.gl/8yzJFv}} - \href{http://goo.gl/GnWZGX}{\textbf{http://goo.gl/GnWZGX}}  }
       \end{itemize}
 
     }
