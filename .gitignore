@@ -1,7 +1,7 @@
-cv.aux
-cv.bcf
-cv.log
-cv.out
-cv.pdf
-cv.run.xml
+*.aux
+*.bcf
+*.log
+*.out
+/*.pdf
+*.run.xml
 

@@ -1,0 +1,317 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% Copyright 2017, Sean Bradly <sb@nsfw.jp>
+
+\documentclass[]{SBResume}
+
+
+% Personal Info for letterhead
+\input{PersonalInfo}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+\makeheader
+
+\makeletterfooter{
+  Complete history and references are available upon request. For full resume, up-to-date information, and \textbf{\LaTeX}\ source, see \href{https://github.com/rhythmx/resume}{https://github.com/rhythmx/resume}
+}
+
+\begin{resume}
+  
+  \resumesection{About}
+  \begin{resumetext}
+    \begin{wrapfigure}{r}{3cm}
+    \insertheadshot
+    \end{wrapfigure}
+    With 15 years of experience in the software engineering and
+    computer security fields, I have successfully researched,
+    designed, implemented, maintained and delivered many successful
+    projects in a wide variety of roles with a very broad spectrum of
+    subject matter.\\
+    
+    Security is a primary focus because it affords an opportunity to
+    constantly learn new and interesting things. Everything needs a
+    level of security, and using that as an entry point, there will
+    always be broad and ever expanding-aspects of technology to
+    explore.\\
+    
+    \textbf{Skills:}
+    \begin{resumeitemize2}
+    \item{\textbf{General}: Security, R\&D, Reversing, Exploiting, Networking, Performance, Embedded}
+    \item{\textbf{Languages}: C, C++, Ruby, Python, Assembly, Shell scripting, Lisp, Java, \LaTeX}
+    \item{\textbf{Architectures}: X86, X86\_64, ARM, PIC, OpenRISC, Z80, ATmega }
+    \item{\textbf{Software}: Linux, Windows, GCC, Clang, GDB, Emacs, IDA, Autotools, CMake}
+    \end{resumeitemize2}
+    
+    \textbf{Personal Interests:}
+    \begin{resumeitemize2}
+    \item{\textbf{Music}: Guitars, bass, drums, brass, synths and recently, a thrash metal ukulele}
+    \item{\textbf{Home Improvement}: My first house has been keeping me busy with plenty of projects}
+    \item{\textbf{Entertaining}: Inviting friends over for smoked meats, craft beers, and fine whisky}
+    \item{\textbf{Career}: Attending conferences and local meetups to socialize and stay current}
+    \end{resumeitemize2}
+
+
+  \end{resumetext}
+
+
+\resumesection{Highlighted Projects}
+
+\resumeentry
+    {2014-2015}
+    {
+      \vspace{0.25cm}
+      \begin{tikzpicture}%
+        \node[circle, inner sep=0.6cm, fill overzoom image=images/google.png] () {};%
+      \end{tikzpicture}
+    }
+    {Secure Embedded Operating System}
+    {Inverse Limit (for Google)}
+    {
+
+        As part of Google ATAP's \emph{Project Vault}, Inverse Limit's
+        small team of 4 designed and developed a complete computer
+        platform with a security focus. All components are open
+        source; the board schematics, OS, applications, drivers,
+        toolchain, emulator, and even the CPU (based on OpenRISC) have
+        been released to GitHub. Among other things, I was solely
+        responsible for implementing the real-time multitasking
+        operating system for the project.\\
+%        
+%        Earlier in the project I was responsible for creating the initial software that used a fake FAT filesystem as a means of socket communication between an external device and an Android device without need for a kernel driver.\\
+
+        Launch video (Google I/O 2015): \hfill \href{http://goo.gl/5mZrVR}{\textbf{http://goo.gl/5mZrVR}}\\
+        Source code: \hfill \href{http://goo.gl/0pbsk7}{\textbf{http://goo.gl/0pbsk7}}
+    }
+    
+  \resumeentry
+      {2013}
+      {
+        \vspace{0.20cm}
+        \begin{tikzpicture}%
+          \node[circle, inner sep=0.6cm, fill overzoom image=images/darpa.jpg] () {};%
+        \end{tikzpicture}
+      }
+      {X86 Hypervisor and CPU Instruction fuzzer}
+      {Inverse Limit (for DARPA)}
+      {
+
+        The MAIM project (Micro-architecture Instruction Mining) was
+        one of three Cyber Fast Track proposals that DARPA accepted
+        from Inverse Limit. It consisted of an x86 instruction fuzzer
+        and a cross-platform hypervisor to execute the instructions
+        and compare their behavior on different implementations. The
+        project identified several undocumented differences between
+        Intel, AMD and VIA architectures.\\
+
+        Whitepaper: \hfill \href{http://goo.gl/Kwa3Rf}{\textbf{http://goo.gl/Kwa3Rf}}\\
+      }
+      
+  \resumeentry
+      {2010-2011}
+      {
+        \vspace{0.15cm}
+        \begin{tikzpicture}%
+          \node[inner sep=0.85cm,fill overzoom image=images/bpointsys.jpg] () {};%
+        \end{tikzpicture}
+      }
+      {Complete TCP/IP Stack for Attack Traffic}
+      {BreakingPoint Systems}
+      {
+
+        I redesigned BreakingPoint's existing network security test
+        framework from a traffic simulator into a fully featured
+        TCP/IP stack that could test live applications while
+        transparently applying any number of advanced network evasion
+        techniques. At the same time, by integrating concurrency into
+        the new design and strategically replacing components with C
+        extensions, the performance was quadrupled.}
+
+\newpage
+      
+\resumesection{Work History}
+
+  \resumeentry
+      {2013-2017/04}
+      {
+        \vspace{2.45cm}
+        \fontsize{34pt}{1em}
+        $\varprojlim$
+      }
+      {Inverse Limit, LLC.}
+      {Security Engineer and Researcher}
+      {
+        
+      Inverse Limit is a research and engineering contracting company
+      that was formed three years ago with my colleagues Patrick Stach
+      and Tim Carstens, supported by notable clients such as Google
+      and DARPA.
+
+      \resumeentryheading{Project Vault}
+      \begin{resumeitemize}
+      \item{Embedded OS (see above)}
+      \item{Developed IO model using FAT filesystem}
+      \item{Hardware drivers (GPIO, UART, Flash, Crypto acceleration)}
+      \item{Android Prototype Application (using native SDK)}
+      \item{Designed entire project layout and build system}
+      \end{resumeitemize}
+
+      \resumeentryheading{Project MAIM}
+      \begin{resumeitemize}
+      \item{Custom x86 hypervisor (see above)}
+      \item{Implemented generators for a number of x86/x64 instruction types}
+      \item{Implemented main data analysis engine}
+      \item{Authored final report with all research results}
+      \end{resumeitemize}
+
+      \resumeentryheading{Other}
+      \begin{resumeitemize}
+      \item{Design of new research proposals}
+      \item{Helped design and implement Kerberos protocol analysis tools}
+      \item{Maintained static code analysis tools written in libClang}
+      \end{resumeitemize}
+    }
+  \resumeentry
+      {2011-2013}
+      {
+        \vspace{1.20cm}
+        \begin{tikzpicture}%
+          \node[inner sep=1.35cm,fill overzoom image=images/levsec.png] () {};%
+        \end{tikzpicture}
+      }
+    {Leviathan Security Group}
+    {Security Consultant and Developer}
+    {
+
+      Leviathan is a small consultancy focusing on challenging niche
+      projects. I was brought on to help facilitate long-term R\&D
+      projects and to assist the consulting group as needed.
+      
+      \resumeentryheading{Mayor Myer (DARPA Research Program)}
+      \begin{resumeitemize}
+      \item{Designed x64 polymorphic shellcode encoder for Metasploit}
+      \item{GNU libc heap corruption detector}
+      \item{Maintained and extended x86 JIT compiler and emulator}
+      \end{resumeitemize}
+      \resumeentryheading{Consulting}
+      \begin{resumeitemize}
+      \item{Audited Intel ME firmware}
+      \item{Developed fuzzer for Intel ME applications}
+      \item{Audits of embedded Java applications}
+      \item{Android Research}
+      \end{resumeitemize}
+      
+    }
+  \resumeentry
+      {2007-2011}
+      {
+        \vspace{0.72cm}
+        \begin{tikzpicture}%
+          \node[inner sep=1.3cm,fill overzoom image=images/bpointsys.jpg] () {};%
+        \end{tikzpicture}        
+      }
+    {BreakingPoint Systems Inc. (now Ixia)}
+    {Security Engineer}
+    {
+
+      BreakingPoint's product is designed to be an ultra-high
+      performance tool for testing network devices. It generates
+      realistic network traffic at 100+ gigabits per second while
+      monitoring the device under test for reporting.
+      
+      \begin{resumeitemize}
+      \item{Complete TCP/IP implementation in Ruby (see above)}
+      \item{Implemented framework for network traffic simulation}
+      \item{Discovered and reported new 3rd-party vulnerabilities}
+      \item{Performed differential patch analysis on Microsoft updates monthly}
+      \item{Maintained product coverage of important security vulnerabilities} 
+      \item{Sample blog posts: \href{http://goo.gl/8yzJFv}{\textbf{http://goo.gl/8yzJFv}} - \href{http://goo.gl/GnWZGX}{\textbf{http://goo.gl/GnWZGX}}  }
+      \end{resumeitemize}
+
+    }
+    \resumeentry
+        {2006-2007}
+        {\ }
+    {Secured Infrastructure Design Corp. (now defunct)}
+    {Security Engineer}
+    {
+
+      SIDC was a small security consulting firm based out of Tokyo,
+      Japan that was developing a web portal allowing customers to
+      setup daily automated security scans.
+      
+      \begin{resumeitemize}
+        \item{Assisted development of automated vulnerability scanner}
+        \item{Designed distributed TCP/UDP port scanner}
+        \item{Implemented raw networking C extension for Python}
+        \item{Relocated to Tokyo for 6 months} % (日本大好き!)
+      \end{resumeitemize}
+    }
+  \resumeentry
+    {2004-2006}
+    {
+      \vspace{0.72cm}
+      \begin{tikzpicture}%
+        \node[inner sep=1.05cm,fill overzoom image=images/gtech.png] () {};%
+      \end{tikzpicture}        
+    }
+    {GTECH Corp.}
+    {Automation Engineer / Systems Administrator}
+    {
+
+      About half (at the time) of the state lotteries in the US were
+      managed by GTECH. As a Systems Administrator at their Austin
+      datacenter, I was directly responsible for the ultra-high
+      availability lottery systems of Texas, California, Idaho,
+      Kansas, Jamaica, and Washington.
+      
+      \begin{resumeitemize}
+      \item{Maintained and operated high volume lottery servers that handle thousands of transactions per minute in an environment where large government fines are imposed for downtime}
+      \item{Administrated OpenVMS, AIX, Linux, Tru64  Unix, Windows (98, 2000, XP, 2003), MSSQL, and Sybase}
+      \item{Automated a large part of the Operations department using Perl, Shell (csh and dcl), and BMC Control-M}
+      \end{resumeitemize}
+    }
+    
+    \iffalse
+    \resumeentry
+        {2002-2004}
+        {\ }
+        {Manning Environmental Inc.}
+        {Software Engineer}
+        {
+          
+          Manning is a small, family-owned business in my hometown that
+          designs and manufactures automatic fluid samplers; essentially
+          robots that periodically pump water from a water treatment
+          system into containers to send to a laboratory.
+          
+          \begin{resumeitemize}
+          \item{Embedded programming for Zilog and Microchip architectures}
+          \item{Maintained company web site, and several other sites on contract}
+          \item{Circuit design verification and debugging}
+          \item{Designed a low-cost microphone-based fluid detection circuit}
+          \item{Designed production tests for new circuit boards}
+          \end{resumeitemize}
+        }
+    \resumeentry
+        {2000}
+        {\ }
+        {University of Texas: Applied Research Labs}
+        {Java Programmer (paid intern)}
+        {
+          
+          I obtained this summer programming internship while still in
+          high school, learned Linux and Java while on-the-job, and
+          completed all of my tasks successfully.
+          
+          \begin{resumeitemize}
+          \item{Updated Java components for a U.S. Department of Defense project}
+          \item{Assembled and installed new employee PC workstations}
+          \item{Assisted staff with physical labor of office relocation}
+          \end{resumeitemize}
+        }
+    \fi
+\end{resume}
+\end{document}
