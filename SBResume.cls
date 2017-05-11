@@ -240,8 +240,8 @@
                {
                  \letterbodystyle
                  \setlength\parindent{12pt}
-                 \noindent#1\\
-                 \par
+                 \setlength{\parskip}{0.2cm}
+                 \noindent#1\par
                }
                {
                }
