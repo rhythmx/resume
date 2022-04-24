@@ -8,7 +8,7 @@ PublicResume.pdf: PublicResume.tex
 
 out: PublicResume.pdf CoverLetterExample.pdf
 	cp CoverLetterExample.pdf out/
-	cp PublicResume.pdf out/Sean\ Bradly\ -\ Resume\ 2017.pdf
+	cp PublicResume.pdf out/Sean\ Bradly\ -\ Resume\ 2021.pdf
 
 clean:
 	rm -f *.aux *.log *.pdf *.out

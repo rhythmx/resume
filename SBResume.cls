@@ -33,6 +33,11 @@
 \RequirePackage{enumitem}
 \RequirePackage{amsmath}
 \RequirePackage{wrapfig}
+\RequirePackage{multicol}
+\RequirePackage{tikz}
+
+\usetikzlibrary{shapes.geometric,fit,decorations.pathreplacing}
+
 %\RequirePackage{ragged2e}
 %\RequirePackage{etoolbox}
 %\RequirePackage{setspace}
@@ -67,7 +72,7 @@
 \definecolor{fname}{HTML}{a0a0a0}
 \definecolor{lname}{HTML}{303030}
 \definecolor{jobtitle}{HTML}{c03030}
-\definecolor{location}{HTML}{808080}
+\definecolor{location}{HTML}{000000}
 %\definecolor{companycolor}{HTML}{2028A0}
 %\definecolor{titlecolor}{HTML}{2028A0}
 \definecolor{companycolor}{HTML}{000000}
@@ -138,9 +143,9 @@
 \newcommand{\insertheadshot}{%
     \ifthenelse{\isundefined{\@headshot}}{}{
       \newlength{\photodim}
-      \setlength{\photodim}{1.1cm}
+      \setlength{\photodim}{0.8cm}
       \begin{tikzpicture}%
-        \node[circle, inner sep=\photodim, fill overzoom image=\@headshot] () {};
+        \node[ellipse, draw, minimum width=1.1cm, minimum height = 3.7cm, inner sep=\photodim, fill overzoom image=\@headshot] () {};
       \end{tikzpicture}
     }
 }
@@ -153,7 +158,7 @@
 \newcommand*{\lhnamestyle}[1]{#1}
 \newcommand{\lhcontactstyle}{\hdgfont\fontsize{5.80pt}{1em}\scshape}
 \newcommand{\lhcontactsep}{\quad\textbar\quad}
-\newcommand*{\lhlocstyle}[1]{{\hdgfont\fontsize{6.10pt}{1em}\textit{\scshape#1}}}
+\newcommand*{\lhlocstyle}[1]{{\hdgfont\fontsize{7.0pt}{1em}\textit{\scshape#1}}}
 \newcommand*{\lhtitlestyle}[1]{{\hdgfont\fontsize{8.40pt}{1em}\color{jobtitle}\textbf{#1}}}
 
 \newcommand{\makeletterhead}{
@@ -163,15 +168,15 @@
   }\\
   {
     \lhcontactstyle
-    \faMobile\ \@phonenumber
-    \lhcontactsep
     \href{mailto:\@emailaddr}{\faEnvelopeO\ \@emailaddr}
     \lhcontactsep
     \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\ \@linkedin}
     \lhcontactsep
     \href{https://github.com/\@github}{\faGitSquare\ \@github}
+    \lhcontactsep
+    \faMobile\ \@phonenumber
   }\\
-  {\color{location}$\vcenter{\hbox{\rule{5.0cm}{0.2pt}}}$\ \lhlocstyle{\@location}}\\
+  {\color{location}$\vcenter{\hbox{\rule{4.8cm}{0.2pt}}}$\ \lhlocstyle{\@location}}\\
   {\vspace{0.1pt}}
   \lhtitlestyle{\@jobtitle}\\
 }
@@ -264,6 +269,15 @@
 }{%
   \end{itemize}
 }
+\newenvironment{resumemultiitem}{%
+  \begin{multicols}{2}
+  \begin{itemize}
+    \setlength\itemsep{-0.35em}
+    \setlist{nosep}
+}{%
+  \end{itemize}
+  \end{multicols}
+}
 \newenvironment{resumeitemize2}{%
   \begin{itemize}
     \setlength\itemsep{-0.15em}
@@ -291,17 +305,38 @@
   \end{minipage}
   \vspace{.25cm}
 }
-\newcommand*{\resumeentryheading}[1]{\vspace{0.1cm}{\quad\quad\hdgfont\footnotesize{\textbf{\uline{#1}}}}}
+\newcommand*{\resumeentryheading}[1]{\vspace*{-0.1cm}{\quad\quad\hdgfont\footnotesize{\textbf{\uline{#1}}}}\vspace*{-0.35cm}}
+
+\def\Vrulefill#1#2{
+  \leaders%
+  \vtop{\hsize=.0025in\vskip#1#2}%
+  \hfill%
+}
+\newcommand*\ruleline[1]{%
+  \par%
+  \noindent%
+  \raisebox{.8ex}{%
+    \makebox[\linewidth]{%
+      \hrulefill%
+      \hspace{1ex}%
+      \raisebox{-.8ex}{#1}%
+      \hspace{1ex}%
+      \hrulefill%
+    }%
+  }%
+}
+
+% \newcommand*{\resumeentryheading}[1]{\hdgfont\footnotesize{\textbf{\uline{#1}}}}
 \newcommand*{\resumesection}[1]{
   {
-    \vspace{0.3cm}
+    \vspace{0.25cm}
+    % \noindent
+    %\Vrulefill{-.05in}{\textbf{\_}}
     \hdgfont
-    \noindent
     \color{headingcolor}
-    \large{\textbf{#1}}
-    %\color{headinglinecolor}
-    \leaders\hbox{ \rule[0.125em]{3pt}{1.0pt} }\hfill
-    \vspace{0.35cm}
+    \ruleline{\large{\textbf{#1}}}
+    %\Vrulefill{-.05in}{\textbf{\_}}
+    % \vspace{0.35cm}
   }\par
 }
 

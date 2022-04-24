@@ -15,7 +15,7 @@
 \makeheader
 
 \makeletterfooter{
-  Complete history and references are available upon request. For full resume, up-to-date information, and \textbf{\LaTeX}\ source, see \href{https://github.com/rhythmx/resume}{https://github.com/rhythmx/resume}
+  Complete work history and references are available upon request. For resume \textbf{\LaTeX}\ source, see \href{https://github.com/rhythmx/resume}{https://github.com/rhythmx/resume}
 }
 
 \begin{resume}
@@ -25,32 +25,42 @@
     \begin{wrapfigure}{r}{3cm}
     \insertheadshot
     \end{wrapfigure}
-    With 15 years of experience in the software engineering and
-    computer security fields, I have successfully researched,
-    designed, implemented, maintained and delivered many successful
-    projects in a wide variety of roles with a very broad spectrum of
-    subject matter.\\
-    
-    Security is a primary focus because it affords an opportunity to
-    constantly learn new and interesting things. Everything needs a
-    level of security, and using that as an entry point, there will
-    always be broad and ever-expanding aspects of technology to
-    explore.\\
-    
+
+    After 20 years of working in the realm of software engineering and 15 of
+    those focused on entirely on cybersecurity, I have some level of experience
+    in just about every facet of computing, and mastery in quite a few. My
+    greatest skill, and why I currently find myself in consulting, is that I'm
+    able to quickly absorb new subject matter and think outside the box.\\
+
+    I've authored large software projects, audited source code and raw binaries
+    for vulnerabilities, run penetration tests, reverse engineered firmware to
+    verify features, rolled my own fuzzing frameworks, soldered this to that,
+    wrote an operating system, and the list goes on. I have also honed my
+    communication skills while authoring countless reports, whitepapers,
+    presentations, and other media about all of the above, presenting them to
+    coworkers, clients, and audiences at large for deep discussion.\\
+
+    I was naturally drawn into the security space. I have always (ever since I
+    could hold a screwdriver) liked to take things apart to see how they work. I
+    like to imagine all the new and unexpected things that can be built out of
+    all the bits and pieces. Working in computer security has always just that
+    for me; breaking things down into components and getting to the ground truth
+    of what is possible.\\
+
     \textbf{Skills:}
     \begin{resumeitemize2}
-    \item{\textbf{General}: Security, R\&D, Reversing, Exploiting, Networking, Performance, Embedded}
-    \item{\textbf{Languages}: C, C++, Ruby, Python, Assembly, Shell scripting, Lisp, Java, \LaTeX}
-    \item{\textbf{Architectures}: X86, X86\_64, ARM, PIC, OpenRISC, Z80, ATmega }
-    \item{\textbf{Software}: Linux, Windows, GCC, Clang, GDB, Emacs, IDA, Autotools, CMake}
+    \item{\textbf{General}: Security, R\&D, Reversing, Exploiting, Networking, Hardware, Automation}
+    \item{\textbf{Languages}: C, C++, Ruby, Python, Assembly, Shell, Lisp, Java}
+    \item{\textbf{Architectures}: X86, X86\_64, ARM, PIC, OpenRISC, Z80, Hexagon }
+    \item{\textbf{Software}: Linux, Windows, GCC, Clang, GDB, Emacs, IDA, Ghidra, Burp}
     \end{resumeitemize2}
     
     \textbf{Personal Interests:}
     \begin{resumeitemize2}
-    \item{\textbf{Music}: Guitars, bass, drums, brass, synths and recently, a thrash metal ukulele}
-    \item{\textbf{Home Improvement}: My first house has been keeping me busy with plenty of projects}
-    \item{\textbf{Entertaining}: Inviting friends over for smoked meats, craft beers, and fine whisky}
-    \item{\textbf{Career}: Attending conferences and local meetups to socialize and stay current}
+    \item{\textbf{Aviation}: I'm currently working towards my private pilot's license}
+    \item{\textbf{Cooking}: Modernist cuisine and science experiments for dinner!}
+    \item{\textbf{Career}: Reading, tinkering, and attending conferences or local meetups to socialize and stay current}
+    \item{\textbf{Other}: Music (guitars, bass, drums, et. al), woodworking, video games}
     \end{resumeitemize2}
 
 
@@ -129,49 +139,105 @@
         the new design and strategically replacing components with C
         extensions, the performance was quadrupled.}
 
-\newpage
-      
+      \newpage
+      \:
+\vspace{0.5cm}      
 \resumesection{Work History}
 
   \resumeentry
-      {2013-2017/04}
+      {2017-current}
       {
         \vspace{2.45cm}
         \fontsize{34pt}{1em}
-        $\varprojlim$
+        \begin{tikzpicture} % [x=3cm,y=4cm]%
+          % \node[rectangle, inner sep=1.35cm,fill stretch image=images/atredis.png] () {};%
+          \path[fill overzoom image=images/atredis.png] (0,0) rectangle (2.1cm,1.1cm);
+        \end{tikzpicture}
       }
-      {Inverse Limit, LLC.}
+      {Atredis Partners, LLC}
+      {Principal Research Consultant}
+      {
+
+        Atredis is an industry leader in security consulting. Focus is
+        placed on bespoke consulting engagements, specifically tailored to the
+        individual client's particular niche. As a Principal at Atredis, I am
+        responsible for leading the technical effort as the main point of
+        contact with clients and for organizing and directing the efforts of other
+        members of the consulting team.\\
+
+        % While Atredis' client list and any details of tests are strictly
+        % confidential, here are some broad examples of projects I have completed
+        % in my position:\\
+
+        \resumeentryheading{Hardware / Embedded}
+        \begin{resumemultiitem}
+        \item{UEFI Reverse Engineering}
+        \item{DSP Reverse Engineering (Hexagon)}
+        \item{Secure Boot Reviews}
+        \item{Hypervisor Testing and Source Reviews}
+        \item{Baseboard Management Controller Reviews}
+        \item{Device Driver Audits}
+        \end{resumemultiitem}
+
+        \resumeentryheading{Mobile}
+        \begin{resumemultiitem}
+        \item{Android Application Binary/Source Review}
+        \item{Vendor HLOS Component/Configuration Review}
+        \item{Trustlet Reverse Engineering}
+        \item{Feature Development}
+        \end{resumemultiitem}
+
+        \resumeentryheading{Miscellaneous}
+        \begin{resumemultiitem}
+        \item{Technical Writing and Presentation}
+        \item{Blockchain Application Reviews}
+        \item{Custom Fuzzer Development}
+        \item{Web Application Assessments}
+        \item{Cloud Configuration Reviews}
+        \item{Network Penetration Tests}
+        \end{resumemultiitem}
+
+      }
+  \resumeentry
+      {2013-2017}
+      {
+        \vspace{2.45cm}
+        \fontsize{34pt}{1em}
+        \:\:$\varprojlim$
+      }
+      {Inverse Limit, LLC}
       {Security Engineer and Researcher}
       {
         
-      Inverse Limit is a research and engineering contracting company
-      that was formed three years ago with my colleagues Patrick Stach
+      Inverse Limit was a research and engineering contracting company
+      that was formed in 2013 ago with my colleagues Patrick Stach
       and Tim Carstens, supported by notable clients such as Google
-      and DARPA.
+      and DARPA.\\
 
       \resumeentryheading{Project Vault}
-      \begin{resumeitemize}
-      \item{Embedded OS (see above)}
+      \begin{resumemultiitem}
+      \item{Embedded OS (see projects)}
       \item{Developed IO model using FAT filesystem}
-      \item{Hardware drivers (GPIO, UART, Flash, Crypto acceleration)}
-      \item{Android Prototype Application (using native SDK)}
+      \item{Drivers for Custom Hardware}
+      \item{Android Prototype Application}
       \item{Designed entire project layout and build system}
-      \end{resumeitemize}
+      \item{Hardware and Software completely open source}
+      \end{resumemultiitem}
 
       \resumeentryheading{Project MAIM}
-      \begin{resumeitemize}
-      \item{Custom x86 hypervisor (see above)}
-      \item{Implemented generators for a number of x86/x64 instruction types}
+      \begin{resumemultiitem}
+      \item{Custom x86 hypervisor (see projects)}
+      \item{Co-Implemented x86/x64 instruction fuzzer}
       \item{Implemented main data analysis engine}
       \item{Authored final report with all research results}
-      \end{resumeitemize}
+      \end{resumemultiitem}
 
       \resumeentryheading{Other}
-      \begin{resumeitemize}
+      \begin{resumemultiitem}
       \item{Design of new research proposals}
-      \item{Helped design and implement Kerberos protocol analysis tools}
-      \item{Maintained static code analysis tools written in libClang}
-      \end{resumeitemize}
+      \item{Created Kerberos protocol analysis tools}
+      \item{Maintained libClang static code analysis tools}
+      \end{resumemultiitem}
     }
   \resumeentry
       {2011-2013}
@@ -181,27 +247,27 @@
           \node[inner sep=1.35cm,fill overzoom image=images/levsec.png] () {};%
         \end{tikzpicture}
       }
-    {Leviathan Security Group}
+    {Leviathan Security Group, Inc.}
     {Security Consultant and Developer}
     {
 
-      Leviathan is a small consultancy focusing on challenging niche
-      projects. I was brought on to help facilitate long-term R\&D
-      projects and to assist the consulting group as needed.
+      Leviathan was (at the time) a small consultancy focusing on
+      challenging niche projects. I was brought on to help facilitate long-term
+      R\&D projects and to assist the consulting group as needed.\\
       
       \resumeentryheading{Mayor Myer (DARPA Research Program)}
-      \begin{resumeitemize}
-      \item{Designed x64 polymorphic shellcode encoder for Metasploit}
+      \begin{resumemultiitem}
+      \item{Created polymorphic x64 shellcode encoder}
       \item{GNU libc heap corruption detector}
-      \item{Maintained and extended x86 JIT compiler and emulator}
-      \end{resumeitemize}
+      \item{Intel JIT compiler and emulator}
+      \end{resumemultiitem}
       \resumeentryheading{Consulting}
-      \begin{resumeitemize}
+      \begin{resumemultiitem}
       \item{Audited Intel ME firmware}
       \item{Developed fuzzer for Intel ME applications}
       \item{Audits of embedded Java applications}
       \item{Android Research}
-      \end{resumeitemize}
+      \end{resumemultiitem}
       
     }
   \resumeentry
@@ -212,17 +278,17 @@
           \node[inner sep=1.3cm,fill overzoom image=images/bpointsys.jpg] () {};%
         \end{tikzpicture}        
       }
-    {BreakingPoint Systems Inc. (now Ixia)}
+    {BreakingPoint Systems Inc. (now Keysight)}
     {Security Engineer}
     {
 
       BreakingPoint's product is designed to be an ultra-high
       performance tool for testing network devices. It generates
       realistic network traffic at 100+ gigabits per second while
-      monitoring the device under test for reporting.
+      monitoring the device under test for reporting.\\
       
       \begin{resumeitemize}
-      \item{Complete TCP/IP implementation in Ruby (see above)}
+      \item{Complete TCP/IP implementation in Ruby (see projects)}
       \item{Implemented framework for network traffic simulation}
       \item{Discovered and reported new 3rd-party vulnerabilities}
       \item{Performed differential patch analysis on Microsoft updates monthly}
@@ -231,6 +297,7 @@
       \end{resumeitemize}
 
     }
+    \iffalse % skip complete work history by default
     \resumeentry
         {2006-2007}
         {\ }
@@ -240,7 +307,7 @@
 
       SIDC was a small security consulting firm based out of Tokyo,
       Japan that was developing a web portal allowing customers to
-      setup daily automated security scans.
+      setup daily automated security scans.\\
       
       \begin{resumeitemize}
         \item{Assisted development of automated vulnerability scanner}
@@ -265,7 +332,7 @@
       managed by GTECH. As a Systems Administrator at their Austin
       datacenter, I was directly responsible for the ultra-high
       availability lottery systems of Texas, California, Idaho,
-      Kansas, Jamaica, and Washington.
+      Kansas, Jamaica, and Washington.\\
       
       \begin{resumeitemize}
       \item{Maintained and operated high volume lottery servers that handle thousands of transactions per minute in an environment where large government fines are imposed for downtime}
@@ -273,8 +340,6 @@
       \item{Automated a large part of the Operations department using Perl, Shell (csh and dcl), and BMC Control-M}
       \end{resumeitemize}
     }
-    
-    \iffalse
     \resumeentry
         {2002-2004}
         {\ }
@@ -285,7 +350,7 @@
           Manning is a small, family-owned business in my hometown that
           designs and manufactures automatic fluid samplers; essentially
           robots that periodically pump water from a water treatment
-          system into containers to send to a laboratory.
+          system into containers to send to a laboratory.\\
           
           \begin{resumeitemize}
           \item{Embedded programming for Zilog and Microchip architectures}
@@ -304,7 +369,7 @@
           
           I obtained this summer programming internship while still in
           high school, learned Linux and Java while on-the-job, and
-          completed all of my tasks successfully.
+          completed all of my tasks successfully.\\
           
           \begin{resumeitemize}
           \item{Updated Java components for a U.S. Department of Defense project}
